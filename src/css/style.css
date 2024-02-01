@@ -10,6 +10,28 @@ body{
     display: flex;
 }
 
+.img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+.img .churrasqueira{
+    position: absolute;
+    width: 100px;
+    margin-right: 350px;
+    margin-top: 571px;
+}
+
+.img .bebidas{
+    position: absolute;
+    width: 200px;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 150px;
+    z-index: -1;
+}
 
 .container {
     display: flex;
@@ -60,3 +82,26 @@ input{
 }
 
 
+@media screen and (max-width: 425px) {
+    body {
+        font-size: 14px; 
+    }
+
+    .container {
+        width: 60%; 
+        min-width: 240px;
+        min-height: 310px;
+    }
+    .img .bebidas {
+        max-width: 170px;
+        margin-top: 50px;
+    }
+
+    .container .img .churrasqueira {
+        max-width: 64px;
+        margin-left: 80px;
+        top: -126px;
+    }
+
+    
+}

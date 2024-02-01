@@ -4,7 +4,9 @@ let inputDuracao = document.getElementById("duracao");
 let resultado = document.getElementById("resultado");
 
 function calcular() {
+
     
+
     let adultos = inputAdultos.value;
     let criancas = inputCriancas.value;
     let duracao = inputDuracao.value
@@ -18,6 +20,7 @@ function calcular() {
     resultado.innerHTML +=  `<p>${qtdTotalCerveja / 269} latinhas de cerveja 269ml</p>`
     resultado.innerHTML +=  `<p>${qtdTotalBebidas}ml de Refri</p>`
 
+    moverImagens()
 }
 
 function carnePP(duracao) {
@@ -41,5 +44,19 @@ function bebidasPP(duracao) {
         return 400;
     } else  {
         return 400;
+    }
+}
+// Mover as imagens ao clicar no botão
+function moverImagens() {
+    
+    let churrasqueira = document.querySelector('.churrasqueira');
+    let bebidas = document.querySelector('.bebidas');
+    
+    if (window.matchMedia('(max-width: 425px)').matches) {
+        churrasqueira.style.top = '-125px';
+        bebidas.style.top = '-10px';
+    } else {
+        churrasqueira.style.top = '-158px';
+        bebidas.style.top = '6px';
     }
 }
